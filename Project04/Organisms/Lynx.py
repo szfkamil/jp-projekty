@@ -1,0 +1,19 @@
+from .Animal import Animal
+
+class Lynx(Animal):
+
+    # Polymorphism magic to create children
+	def __init__(self, lynx=None, position=None, world=None):
+		super(Lynx, self).__init__(lynx, position, world)
+
+	def clone(self):
+		return Lynx(self, None, None)
+
+    # Override parameters
+	def initParams(self):
+		self.power = 6
+		self.initiative = 5
+		self.liveLength = 18
+		self.powerToReproduce = 14
+		self.sign = 'R'
+        
